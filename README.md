@@ -57,15 +57,6 @@ Manejo global de errores
 
 Endpoints REST claros y documentados
 
-📁 Estructura del proyecto
-src/main/java/com/web/accentureprueba
-├── controller
-├── service
-├── repository
-├── model
-├── dto
-├── exception
-
 🚀 Cómo ejecutar el proyecto
 🔹 Opción 1: Ejecutar con Docker (recomendado)
 Requisitos
