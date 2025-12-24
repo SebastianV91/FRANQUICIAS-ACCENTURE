@@ -26,4 +26,12 @@ public class ProductoController {
                 .map(producto -> ResponseEntity.status(HttpStatus.CREATED).body(producto));
     }
 
+    @DeleteMapping("/{productoId}")
+    public Mono<ResponseEntity<Void>> eliminar(@PathVariable Long productoId){
+
+        return productoService.eliminar(productoId)
+                .thenReturn(ResponseEntity.noContent().build());
+
+    }
+
 }

@@ -33,4 +33,13 @@ public class ProductoService {
 
     }
 
+    public Mono<Void> eliminar(Long productoId) {
+
+        return productoRepository.findById(productoId)
+                .switchIfEmpty(Mono.error(
+                        new NotFoundException("Producto no encontrado")))
+                .flatMap(productoRepository::delete);
+
+    }
+
 }
