@@ -1,5 +1,6 @@
 package com.web.accentureprueba.service;
 
+import com.web.accentureprueba.dto.ActualizarStockDTO;
 import com.web.accentureprueba.dto.ProductoDTO;
 import com.web.accentureprueba.exception.NotFoundException;
 import com.web.accentureprueba.model.Producto;
@@ -39,6 +40,19 @@ public class ProductoService {
                 .switchIfEmpty(Mono.error(
                         new NotFoundException("Producto no encontrado")))
                 .flatMap(productoRepository::delete);
+
+    }
+
+    public Mono<Producto> actualizarStock(
+            Long productoId, ActualizarStockDTO actualizarStockDTO) {
+
+        return productoRepository.findById(productoId)
+                .switchIfEmpty(Mono.error(
+                        new NotFoundException("Producto no encontrado")))
+                .flatMap(producto -> {
+                    producto.setStock(actualizarStockDTO.getStock());
+                    return productoRepository.save(producto);
+                });
 
     }
 

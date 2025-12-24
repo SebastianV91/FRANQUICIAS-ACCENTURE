@@ -1,5 +1,6 @@
 package com.web.accentureprueba.controllers;
 
+import com.web.accentureprueba.dto.ActualizarStockDTO;
 import com.web.accentureprueba.dto.ProductoDTO;
 import com.web.accentureprueba.model.Producto;
 import com.web.accentureprueba.service.ProductoService;
@@ -32,6 +33,15 @@ public class ProductoController {
         return productoService.eliminar(productoId)
                 .thenReturn(ResponseEntity.noContent().build());
 
+    }
+
+    @PutMapping("/{productoId}/stock")
+    public Mono<ResponseEntity<Producto>> actualizarStock(
+            @PathVariable Long productoId,
+            @RequestBody ActualizarStockDTO actualizarStockDTO){
+
+        return productoService.actualizarStock(productoId, actualizarStockDTO)
+                .map(ResponseEntity::ok);
     }
 
 }
