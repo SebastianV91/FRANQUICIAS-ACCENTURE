@@ -145,9 +145,3 @@ Separación de lógica de negocio en servicios
 Uso de operadores reactivos (flatMap, map, switchIfEmpty)
 
 Docker para facilitar despliegue y ejecución
-
-👨‍💻 Autor
-
-Sebastian Vergara
-Desarrollador Backend
-Prueba técnica – Accenture
