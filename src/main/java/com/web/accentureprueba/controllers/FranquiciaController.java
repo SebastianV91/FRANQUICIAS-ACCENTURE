@@ -34,7 +34,7 @@ public class FranquiciaController {
     }
 
     @PutMapping("/{franquiciaId}/nombre")
-    public Mono<ResponseEntity<Franquicia>> actualizarNombre(@PathVariable Long franquiciaId, @RequestBody ActualizarNombreDTO actualizarNombreDTO){
+    public Mono<ResponseEntity<Franquicia>> actualizarNombreFranquicia(@PathVariable Long franquiciaId, @RequestBody ActualizarNombreDTO actualizarNombreDTO){
 
         return franquiciaService.actualizarNombre(franquiciaId, actualizarNombreDTO)
                 .map(ResponseEntity::ok);
