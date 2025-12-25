@@ -1,5 +1,6 @@
 package com.web.accentureprueba.controllers;
 
+import com.web.accentureprueba.dto.ActualizarNombreDTO;
 import com.web.accentureprueba.dto.ActualizarStockDTO;
 import com.web.accentureprueba.dto.ProductoDTO;
 import com.web.accentureprueba.model.Producto;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/sucursales/{sucursalId}/productos")
+@RequestMapping("/api/productos")
 public class ProductoController {
 
     private final ProductoService productoService;
@@ -19,7 +20,7 @@ public class ProductoController {
         this.productoService = productoService;
     }
 
-    @PostMapping
+    @PostMapping("/{sucursalId}")
     public Mono<ResponseEntity<Producto>> crear(@PathVariable Long sucursalId,
                                                 @RequestBody ProductoDTO productoDTO){
 
@@ -41,6 +42,13 @@ public class ProductoController {
             @RequestBody ActualizarStockDTO actualizarStockDTO){
 
         return productoService.actualizarStock(productoId, actualizarStockDTO)
+                .map(ResponseEntity::ok);
+    }
+
+    @PutMapping("/{productoId}/nombre")
+    public Mono<ResponseEntity<Producto>> actualizarNombreProducto(@PathVariable Long productoId, @RequestBody ActualizarNombreDTO actualizarNombreDTO){
+
+        return productoService.actualizarNombre(productoId, actualizarNombreDTO)
                 .map(ResponseEntity::ok);
     }
 
