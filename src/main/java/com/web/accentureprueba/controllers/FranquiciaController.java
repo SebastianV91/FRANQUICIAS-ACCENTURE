@@ -1,5 +1,6 @@
 package com.web.accentureprueba.controllers;
 
+import com.web.accentureprueba.dto.ActualizarNombreDTO;
 import com.web.accentureprueba.dto.FranquiciaDTO;
 import com.web.accentureprueba.model.Franquicia;
 import com.web.accentureprueba.repository.ProductoRepository;
@@ -32,6 +33,11 @@ public class FranquiciaController {
                         ResponseEntity.status(HttpStatus.CREATED).body(franquicia));
     }
 
+    @PutMapping("/{franquiciaId}/nombre")
+    public Mono<ResponseEntity<Franquicia>> actualizarNombre(@PathVariable Long franquiciaId, @RequestBody ActualizarNombreDTO actualizarNombreDTO){
 
+        return franquiciaService.actualizarNombre(franquiciaId, actualizarNombreDTO)
+                .map(ResponseEntity::ok);
+    }
 
 }

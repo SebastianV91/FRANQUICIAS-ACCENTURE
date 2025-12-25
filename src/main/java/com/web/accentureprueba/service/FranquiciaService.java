@@ -1,5 +1,6 @@
 package com.web.accentureprueba.service;
 
+import com.web.accentureprueba.dto.ActualizarNombreDTO;
 import com.web.accentureprueba.dto.FranquiciaDTO;
 import com.web.accentureprueba.exception.NotFoundException;
 import com.web.accentureprueba.model.Franquicia;
@@ -31,6 +32,18 @@ public class FranquiciaService {
     public Mono<Franquicia> obtenerPorId(Long id){
         return franquiciaRepository.findById(id)
                 .switchIfEmpty(Mono.error(new NotFoundException("Franquicia no encontrada")));
+    }
+
+    public Mono<Franquicia> actualizarNombre(Long franquiciaId, ActualizarNombreDTO actualizarNombreDTO){
+
+        return franquiciaRepository.findById(franquiciaId)
+                .switchIfEmpty(Mono.error(
+                        new NotFoundException("Franquicia no encontrada")))
+                .flatMap(franquicia -> {
+                    franquicia.setNombre(actualizarNombreDTO.getNombre());
+                    return franquiciaRepository.save(franquicia);
+                });
+
     }
 
 }
