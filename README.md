@@ -37,8 +37,6 @@ El enfoque se centra en **programación reactiva**, diseño limpio y buenas prá
 | Lenguaje | Java 17 |
 | Framework | Spring Boot WebFlux |
 | Persistencia | R2DBC + MySQL |
-| Tests | WebTestClient |
-| Documentación | Swagger |
 | API Manual | Postman |
 | Contenedores | Docker / Docker Compose |
 
