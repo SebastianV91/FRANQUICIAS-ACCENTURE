@@ -116,15 +116,6 @@ mvn spring-boot:run
 
 ---
 
-
-## 📦 Colección Postman
-
-Incluida en el repositorio para pruebas manuales:
-
-`franquicias-api.postman_collection.json`
-
----
-
 ## 🤝 Autor
 
 **Sebastian Vergara**  
