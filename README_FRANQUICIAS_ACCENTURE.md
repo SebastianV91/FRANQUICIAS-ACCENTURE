@@ -7,7 +7,6 @@ Este proyecto corresponde a una **prueba técnica backend** desarrollada con:
 - **R2DBC + MySQL**
 - **Programación reactiva (Mono/Flux)**
 - **Docker**
-- **Swagger / OpenAPI**
 - **WebTestClient para testing**
 - **Postman para pruebas manuales**
 
@@ -50,23 +49,19 @@ El enfoque se centra en **programación reactiva**, diseño limpio y buenas prá
 ```
 src
 ├── main
-│   ├── java
-│   │   └── com/web/accentureprueba
-│   │       ├── controller
-│   │       ├── service
-│   │       ├── repository
-│   │       ├── model
-│   │       ├── dto
-│   │       └── exception
-│   └── resources
-│       ├── application.yml
-│       └── schema.sql
-└── test
-    ├── java
-    │   └── com/web/accentureprueba
-    └── resources
-        ├── application-test.yml
-        └── data-test.sql
+   ├── java
+   │   └── com/web/accentureprueba
+   │       ├── controllers
+   │       ├── service
+   │       ├── repository
+   │       ├── model
+   |       ├── mapper
+   │       ├── dto
+   │       └── exception
+   └── resources
+        └── application.yml
+       
+
 ```
 
 ---
@@ -91,29 +86,16 @@ http://localhost:8080
 1. Crear base de datos:
 
 ```sql
-CREATE DATABASE franquicias_db;
+CREATE DATABASE dbaccenture;
 ```
 
-2. Ejecutar script `schema.sql` en MySQL.
+2. Configurar credenciales en `application.yml`.
 
-3. Configurar credenciales en `application.yml`.
-
-4. Ejecutar:
+3. Ejecutar:
 
 ```bash
 mvn spring-boot:run
 ```
-
----
-
-## 📚 Documentación API
-
-Swagger UI:
-```
-http://localhost:8080/swagger-ui.html
-```
-
----
 
 ## 📋 Endpoints principales
 
@@ -136,15 +118,6 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
-## 🧪 Tests
-
-Los tests se implementan con **WebTestClient** y un perfil `test` separado.
-
-```bash
-mvn test
-```
-
----
 
 ## 📦 Colección Postman
 
