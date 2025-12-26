@@ -1,15 +1,7 @@
-
----
-
-## ✅ Colección Postman JSON actualizada
-
-**Importante:** actualicé el campo `description` y agregué el **link del repo** en cada request para claridad.
-
-```json
 {
   "info": {
     "name": "API Franquicias - Prueba Técnica",
-    "description": "Colección Postman para API Franquicias (Spring WebFlux). Repo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE",
+    "description": "Colección Postman para la prueba técnica Backend (Spring WebFlux + MySQL)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -31,8 +23,7 @@
               "raw": "{{baseUrl}}/api/franquicias",
               "host": ["{{baseUrl}}"],
               "path": ["api", "franquicias"]
-            },
-            "description": "Crear una nueva franquicia\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         },
         {
@@ -50,8 +41,7 @@
               "raw": "{{baseUrl}}/api/franquicias/1/nombre",
               "host": ["{{baseUrl}}"],
               "path": ["api", "franquicias", "1", "nombre"]
-            },
-            "description": "Actualizar el nombre de una franquicia\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         }
       ]
@@ -74,8 +64,7 @@
               "raw": "{{baseUrl}}/api/franquicias/1/sucursales",
               "host": ["{{baseUrl}}"],
               "path": ["api", "franquicias", "1", "sucursales"]
-            },
-            "description": "Agregar sucursal a franquicia (id=1)\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         },
         {
@@ -93,8 +82,7 @@
               "raw": "{{baseUrl}}/api/sucursales/1/nombre",
               "host": ["{{baseUrl}}"],
               "path": ["api", "sucursales", "1", "nombre"]
-            },
-            "description": "Actualizar nombre de sucursal (id=1)\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         }
       ]
@@ -117,8 +105,7 @@
               "raw": "{{baseUrl}}/api/sucursales/1/productos",
               "host": ["{{baseUrl}}"],
               "path": ["api", "sucursales", "1", "productos"]
-            },
-            "description": "Agregar producto a sucursal (id=1)\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         },
         {
@@ -136,8 +123,7 @@
               "raw": "{{baseUrl}}/api/productos/1/stock",
               "host": ["{{baseUrl}}"],
               "path": ["api", "productos", "1", "stock"]
-            },
-            "description": "Actualizar stock de producto (id=1)\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         },
         {
@@ -155,8 +141,7 @@
               "raw": "{{baseUrl}}/api/productos/1/nombre",
               "host": ["{{baseUrl}}"],
               "path": ["api", "productos", "1", "nombre"]
-            },
-            "description": "Actualizar nombre de producto (id=1)\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         },
         {
@@ -167,8 +152,7 @@
               "raw": "{{baseUrl}}/api/productos/1",
               "host": ["{{baseUrl}}"],
               "path": ["api", "productos", "1"]
-            },
-            "description": "Eliminar producto (id=1)\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         }
       ]
@@ -184,8 +168,7 @@
               "raw": "{{baseUrl}}/api/franquicias/1/productos/max-stock",
               "host": ["{{baseUrl}}"],
               "path": ["api", "franquicias", "1", "productos", "max-stock"]
-            },
-            "description": "Obtener producto con máximo stock por sucursal\nRepo: https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE"
+            }
           }
         }
       ]
