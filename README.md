@@ -101,20 +101,20 @@ mvn spring-boot:run
 
 ### Franquicias
 - `POST /api/franquicias`
-- `PATCH /api/franquicias/{id}/nombre`
+- `PUT /api/franquicias/{franquiciaId}/nombre`
 
 ### Sucursales
-- `POST /api/franquicias/{id}/sucursales`
-- `PATCH /api/sucursales/{id}/nombre`
+- `POST /api/sucursales/{franquiciaId}`
+- `PUT /api/sucursales/{sucursalId}/nombre`
 
 ### Productos
-- `POST /api/sucursales/{id}/productos`
-- `PATCH /api/productos/{id}/stock`
-- `PATCH /api/productos/{id}/nombre`
-- `DELETE /api/productos/{id}`
+- `POST /api/productos/{sucursalId}`
+- `PUT /api/productos/{productoId}/stock`
+- `PUT /api/productos/{ProductoId}/nombre`
+- `DELETE /api/productos/{productoId}`
 
 ### Reportes
-- `GET /api/franquicias/{id}/productos/max-stock`
+- `GET /api/reporte/{franquiciaId}/productos/max-stock`
 
 ---
 
