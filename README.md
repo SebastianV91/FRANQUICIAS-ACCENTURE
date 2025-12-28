@@ -7,9 +7,9 @@ Este proyecto corresponde a una **prueba técnica backend** desarrollada con:
 - **R2DBC + MySQL**
 - **Programación reactiva (Mono/Flux)**
 - **Docker**
-- **WebTestClient para testing**
 - **Postman para pruebas manuales**
-
+- **Despliegue en la nube con Railway**
+  
 📍 Repositorio oficial:  
 https://github.com/SebastianV91/FRANQUICIAS-ACCENTURE
 
@@ -39,7 +39,7 @@ El enfoque se centra en **programación reactiva**, diseño limpio y buenas prá
 | Persistencia | R2DBC + MySQL |
 | API Manual | Postman |
 | Contenedores | Docker / Docker Compose |
-
+| Cloud | Railway |
 ---
 
 ## 📦 Estructura del Proyecto
@@ -113,6 +113,26 @@ mvn spring-boot:run
 
 ### Reportes
 - `GET /api/reporte/{franquiciaId}/productos/max-stock`
+
+---
+
+## ☁️ Despliegue en la Nube (Railway)
+
+Este proyecto se encuentra desplegado en **Railway**, una plataforma de cloud que permite desplegar aplicaciones backend de forma sencilla.
+
+1. Railway detecta automáticamente el proyecto Spring Boot y realiza el build.
+
+---
+
+### 🌍 URL pública
+
+La API queda disponible públicamente en una URL similar a:
+
+```
+responsible-strength-production-8da8.up.railway.app
+```
+
+> ⚠️ La URL puede variar dependiendo del entorno y el proyecto.
 
 ---
 
