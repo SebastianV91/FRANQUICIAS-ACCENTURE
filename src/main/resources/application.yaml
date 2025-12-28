@@ -1,8 +1,8 @@
 spring:
   r2dbc:
-    url: r2dbc:mysql://localhost:3306/dbaccenture
-    username: root
-    password: 12345678
+    url: r2dbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
 
   sql:
     init:
