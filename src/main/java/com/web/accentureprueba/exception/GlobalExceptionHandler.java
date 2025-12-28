@@ -28,9 +28,7 @@ public class GlobalExceptionHandler {
 
         Map<String, String> error = new HashMap<>();
         error.put("error", "Error interno del servidor");
-
-        System.out.println("Error servidor:"+ex.getMessage());
-
+        
         return Mono.just(
                 ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error)
         );
