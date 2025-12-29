@@ -120,7 +120,17 @@ mvn spring-boot:run
 
 Este proyecto se encuentra desplegado en **Railway**, una plataforma de cloud que permite desplegar aplicaciones backend de forma sencilla.
 
-Railway detecta automáticamente el proyecto Spring Boot y realiza el build.
+### 🔹 Pasos generales de despliegue
+
+1. Configurar las siguientes variables de entorno en motor de bases de datos MySQL:
+
+```env
+SPRING_R2DBC_URL=r2dbc:mysql://shortline.proxy.rlwy.net:26374/railway
+SPRING_R2DBC_USERNAME=root
+SPRING_R2DBC_PASSWORD=GDgSlDbebNRRyRFviVIddSaTttplrLcm
+```
+
+2. Railway detecta automáticamente el proyecto Spring Boot y realiza el build.
 
 ### 🌍 URL pública
 
